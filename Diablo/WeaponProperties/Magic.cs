@@ -8,13 +8,13 @@ namespace Diablo
 {
     public class Magic
     {
-        public string MagicTypeProp { get; set; }
+        public string Type { get; set; }
 
         public int Value { get; set; }
 
         public Magic(string type, int value)
         {
-            this.MagicTypeProp = type;
+            this.Type = type;
             this.Value = value;
         }
 

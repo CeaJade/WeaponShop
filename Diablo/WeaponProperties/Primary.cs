@@ -8,13 +8,13 @@ namespace Diablo
 {
     public class Primary
     {
-        public string PrimPropType { get; set; }
+        public string Type { get; set; }
 
         public int Value { get; set; }
 
         public Primary(string type, int value)
         {
-            this.PrimPropType = type;
+            this.Type = type;
             this.Value = value;
         }
 

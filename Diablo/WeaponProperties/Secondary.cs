@@ -8,13 +8,13 @@ namespace Diablo
 {
     public class Secondary
     {
-        public string SecondPropType { get; set; }
+        public string Type { get; set; }
 
         public int Value { get; set; }
 
         public Secondary(string type, int value)
         {
-            this.SecondPropType = type;
+            this.Type = type;
             this.Value = value;
         }
 

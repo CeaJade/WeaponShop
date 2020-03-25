@@ -14,13 +14,12 @@ namespace Diablo
 
         public Rarity Rarity { get; set; }
 
-        public List<Primary> PrimaryStats { get; set; }
+        private List<Primary> PrimaryStats { get; set; }
 
-        public List<Secondary> SecondaryStats { get; set; }
+        private List<Secondary> SecondaryStats { get; set; }
 
-        public List<Magic> MagicStats { get; set; }
+        private List<Magic> MagicStats { get; set; }
         
-
         public Weapon(string name, int dmg, Rarity rarity)
         {
             Name = name;
@@ -43,9 +42,9 @@ namespace Diablo
             this.MagicStats = magicStats;
         }
 
-        public string ToString(bool bought)
+        public string ToString(bool owned)
         {
-            if (bought == false)
+            if (owned == false)
             {
                 if (this.Rarity.RarityLevel == 1)
                 {
@@ -71,17 +70,17 @@ namespace Diablo
                     string primary = "";
                     foreach (Primary prim in PrimaryStats)
                     {
-                        primary += " " + prim.PrimPropType + ": +" + prim.Value + "\n";
+                        primary += " " + prim.Type + ": +" + prim.Value + "\n";
                     }
                     string secondary = "";
                     foreach (Secondary secon in SecondaryStats)
                     {
-                        secondary += " " + secon.SecondPropType + ": +" + secon.Value + "\n";
+                        secondary += " " + secon.Type + ": +" + secon.Value + "\n";
                     }
                     string magic = "";
                     foreach (Magic mag in MagicStats)
                     {
-                        magic += " " + mag.MagicTypeProp + ": +" + mag.Value + "\n";
+                        magic += " " + mag.Type + ": +" + mag.Value + "\n";
                     }
 
                     return Rarity.GetRarity() + " " + Name + " \nDamage: " + Damage + "\n\nPrimary:\n" + primary + "\n\nSecondary:\n" + secondary + "\n\nMagic:\n" + magic;

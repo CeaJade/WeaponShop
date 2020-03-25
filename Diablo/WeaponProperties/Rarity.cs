@@ -11,7 +11,7 @@ namespace Diablo
     {
         public int RarityLevel { get; set; }
 
-        static private Random rdm = new Random();
+        private static Random rdm = new Random();
 
         public Rarity()
         {
